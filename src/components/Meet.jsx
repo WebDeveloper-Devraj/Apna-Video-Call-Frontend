@@ -15,7 +15,7 @@ import { meetSliceActions } from "../store/slices/meetSlice";
 import { flashMessageActions } from "../store/slices/flashMessage";
 import { useNavigate } from "react-router-dom";
 
-const server_url = "http://localhost:8000";
+const server_url = import.meta.env.VITE_BACKEND_URL;
 
 const peerConfigConnections = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
@@ -213,7 +213,6 @@ const Meet = () => {
     window.localStream = stream;
     localVideoRef.current.srcObject = stream;
 
-
     // it will not run first time
     for (let id in connections) {
       if (id === socketIdRef.current) continue;
@@ -290,7 +289,6 @@ const Meet = () => {
       });
 
       socketRef.current.on("user-joined", (id, clients) => {
-
         clients.forEach((socketListId) => {
           // if (socketListId === socketIdRef.current) return;
           // if (connections[socketListId]) return; // TODO: debug this later if err comes

@@ -12,6 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { authSliceActions } from "../store/slices/authSlice";
 import { flashMessageActions } from "../store/slices/flashMessage";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function Authentication({ state }) {
   const navigate = useNavigate();
@@ -50,15 +51,12 @@ export default function Authentication({ state }) {
       (formState === "login" && emailValid && passwordValid)
     ) {
       if (formState === "login") {
-        const response = await fetch(
-          `http://localhost:8000/api/v1/users/login`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-            credentials: "include",
-          }
-        );
+        const response = await fetch(`${BASE_URL}/api/v1/users/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+          credentials: "include",
+        });
 
         const result = await response.json();
 
@@ -80,15 +78,12 @@ export default function Authentication({ state }) {
           );
         }
       } else {
-        const response = await fetch(
-          `http://localhost:8000/api/v1/users/signup`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-            credentials: "include",
-          }
-        );
+        const response = await fetch(`${BASE_URL}/api/v1/users/signup`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+          credentials: "include",
+        });
 
         const result = await response.json();
 
