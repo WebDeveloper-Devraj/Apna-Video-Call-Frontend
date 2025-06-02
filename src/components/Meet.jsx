@@ -14,6 +14,7 @@ import styles from "../styles/Meet.module.css";
 import { meetSliceActions } from "../store/slices/meetSlice";
 import { flashMessageActions } from "../store/slices/flashMessage";
 import { useNavigate } from "react-router-dom";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 const server_url = import.meta.env.VITE_BACKEND_URL;
 
@@ -113,18 +114,15 @@ const Meet = () => {
     if (state === "createMeeting") {
       const title = titleRef.current.value;
 
-      const response = await fetch(
-        `http://localhost:8000/api/v1/meetings/create`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            hostId: user._id,
-            title: title,
-            meetingCode,
-          }),
-        }
-      );
+      const response = await fetch(`${BASE_URL}/api/v1/meetings/create`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          hostId: user._id,
+          title: title,
+          meetingCode,
+        }),
+      });
 
       const result = await response.json();
 
@@ -140,17 +138,14 @@ const Meet = () => {
         navigate("/home");
       }
     } else if (state === "joinMeeting") {
-      const response = await fetch(
-        `http://localhost:8000/api/v1/meetings/join`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            participant: user._id,
-            meetingCode,
-          }),
-        }
-      );
+      const response = await fetch(`${BASE_URL}/api/v1/meetings/join`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          participant: user._id,
+          meetingCode,
+        }),
+      });
 
       const result = await response.json();
 
