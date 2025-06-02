@@ -4,6 +4,7 @@ import Authentication from "./components/Authentication";
 import Home from "./components/Home";
 import App from "./routes/App";
 import Meet from "./components/Meet";
+import NotFound from "./components/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,7 @@ const router = createBrowserRouter([
   },
   { path: "/meet/:id", element: <Meet /> },
 
-  // TODO
-  // {path: "*", element: <NotFound /> }
+  { path: "*", element: <NotFound /> },
 ]);
 
 export default router;
