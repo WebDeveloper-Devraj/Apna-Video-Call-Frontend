@@ -1,0 +1,28 @@
+.loginImage {
+  height: 60%;
+  width: auto;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+
+.formGrid {
+  width: 40%;
+}
+
+@media(max-width: 600px) {
+  .grid {
+    height: 80vh;
+  }
+
+  .loginImage {
+    height: 25%;
+  }
+
+  .imgGrid {
+    display: none;
+  }
+
+  .formGrid {
+    width: 100%;
+  }
+}

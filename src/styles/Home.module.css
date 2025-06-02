@@ -1,0 +1,43 @@
+.meetContainer {
+  background: #0a0a0a;
+  display: flex;
+  height: 100vh;
+  color: #fff;
+  font-family: sans-serif;
+  gap: 8rem;
+  padding-left: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftPanel h2{
+  margin-bottom: 1rem;
+}
+
+.rightPanel img {
+  width: 70%;
+  border-radius: 15px;
+}
+
+@media(max-width: 600px) {
+  .meetContainer {
+    flex-direction: column;
+    height: 100vh;
+    gap: 1.2rem;
+    padding-left: 2rem;
+  }
+
+  .leftPanel h2{
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .rightPanel img {
+    width: 70%;
+    border-radius: 15px;
+  }
+
+  .rightPanel {
+    padding-left: 2rem;
+  }
+}

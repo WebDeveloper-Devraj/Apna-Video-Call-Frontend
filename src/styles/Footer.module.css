@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.footer{
+  padding:5.5%;
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: #000000;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.footerContainer{
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+  font-size: 20px;
+}
+
+.section {
+  width: 33%;
+  /* border: 2px solid greenyellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section a {
+  text-decoration: none;
+}
+
+.brandName{
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.footerListHeading{
+  font-weight: 600;
+  padding-left: 2rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff9a;
+  width: 100%;
+  /* border: 2px solid red; */
+  text-align: center;
+}
+
+.section ul{
+  list-style-type: none;
+}
+
+.socialLink {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socialLink:hover {
+  color: #2d48f7; /* or any accent color */
+  text-decoration: underline;
+}
+
+ul li {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer_icon{
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+
+.copyRight {
+  text-align: center;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+@media (min-width: 500px) and (max-width: 740px) {
+  .footerContainer{
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    font-size: 20px;
+  }
+
+  .logo_container {
+    width: 140px;
+  }
+
+  .logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .section {
+    width: 30%;
+  }
+
+  .logoSection {
+    width: 25%;
+  }
+
+  .getInTouchSection {
+    width: 40%;
+  }
+
+  .footer_container {
+    gap: 3%;
+  }
+
+  .footer_list_heading {
+    font-size: 0.8rem;
+  }
+
+  ul li {
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.7rem;
+  }
+
+  .footer_icon {
+    font-size: 0.9rem;
+    margin-left: 3px;
+  }
+
+  .logo_name {
+    font-size: 1rem;
+  }
+
+  .copyRight {
+    font-size: small;
+  }
+
+  hr {
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .footerContainer{
+    gap: 3%;
+  }
+
+  .section {
+    width: 33%;
+    margin-bottom: 0.8rem;
+  }
+
+  .brandName{
+    font-size: 1.2rem;
+  }
+
+  .footerListHeading{
+    font-weight: 600;
+    padding-left: 1rem;
+    font-size: 14px;
+    margin-bottom: 0.3rem;
+    width: 100%;
+    /* border: 2px solid red; */
+    text-align: left;
+  }
+
+  .getInTouchSection {
+    width: 45%;
+  }
+
+  .footer_container {
+    gap: 2%;
+  }
+
+  .footer_list_heading {
+    font-size: 0.6rem;
+  }
+
+  ul li {
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.5rem;
+  }
+
+  .footer_icon {
+    font-size: 0.6rem;
+    margin-left: 1px;
+  }
+
+  .logo_name {
+    padding-top: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .copyRight {
+    font-size:x-small;
+  }
+
+  .footer_icons .footer_icon{
+    /* display: flex; */
+    margin-left: 3px;
+  }
+
+  hr {
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+}
