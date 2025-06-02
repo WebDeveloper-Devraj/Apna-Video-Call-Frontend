@@ -657,7 +657,7 @@ const Meet = () => {
                     {messages.length !== 0 ? (
                       messages.map((item, index) => {
                         return (
-                          <div style={{ marginBottom: "20px" }} key={index}>
+                          <div style={{ marginBottom: "10px" }} key={index}>
                             <p style={{ fontWeight: "bold" }}>{item.sender}</p>
                             <p>{item.data}</p>
                           </div>

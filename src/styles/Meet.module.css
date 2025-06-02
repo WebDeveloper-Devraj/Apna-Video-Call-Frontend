@@ -123,6 +123,8 @@
 
 .chattingArea {
     position: fixed;
+    justify-content: center;
+    align-items: center;
   /* border: 2px solid red; */
     bottom: 5rem;
 }
@@ -147,9 +149,12 @@
   }
 
   .chatRoom {
+  /* border: 2px solid red; */
     position: fixed;
     height: 50vh;
-    bottom: 10%;
+    bottom: 9%;
+    background: white;
+    border-radius: 10px;
     width: 50%;
     padding-inline: 10px;
 }
@@ -158,19 +163,33 @@
     position: relative;
     overflow-y: auto;
   /* border: 2px solid red; */
-    height: 81%;
+    height: 69%;
+}
+
+.chatContainer h1 {
+  font-size: 1.5rem;
 }
 
 
 .chattingArea {
-    position: fixed;
-  /* border: 2px solid red; */
-    bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  bottom: 3.5rem;
+  gap: 8px;
+  padding: 8px;
+  align-items: center;
+}
+
+.chattingArea input {
+  width: 60%; /* or 100px, as per your need */
+  
 }
 
 .chattingArea button {
-  text-align: center;
-  width: 60%;
+  width: auto;
+  min-width: 60px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
 }
 
 
